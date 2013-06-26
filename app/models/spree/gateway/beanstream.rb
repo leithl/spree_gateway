@@ -177,6 +177,7 @@ module Spree
 
         def post_data(params, use_profile_api)
           params[:requestType] = 'BACKEND'
+          params[:cardValidation] = 1
           if use_profile_api
             params[:merchantId] = @options[:login]
             params[:passCode] = @options[:secure_profile_api_key]
